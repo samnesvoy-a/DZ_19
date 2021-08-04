@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body { background: coral; }
+
+        #clock {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            background: teal;
+            padding: 2rem;
+            border-radius: 5px 5px 5px 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <h1>Film list</h1>
+    <ul>
+        <li>Jurassic Park</li>
+        <li>Schindler’s List</li>
+        <li>Million Dollar Baby</li>
+        <li>The Social Network</li>
+        <li>The Silence of the Lambs</li>
+        <li id="last"></li>
+    </ul>
+    <label>Search:</label>
+    <input id="search" type="text" />
+    <p id="filmsCount"></p>
+
+
+
+    <h2>Menu</h2>
+    <ul id="menu">
+        <li>cocoa</li>
+        <li>cappuccino</li>
+        <li>smoothie</li>
+        <li>matcha frappe</li>
+    </ul>
+
+    <h2 id="clock"></h2>
+</div>
+
+
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
