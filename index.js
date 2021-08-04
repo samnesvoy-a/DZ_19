@@ -22,14 +22,13 @@ input.oninput = function() {
 let menuItem = document.querySelectorAll("#menu li");
 menuItem.forEach(
     function (el, index) {
-        console.log(index)
+
         el.addEventListener("click", function(event) {
             clicked = event.target.innerText;
             if (INGREDIENTS[clicked]) {
                 let subItems = INGREDIENTS[clicked];
 
                 let ol = document.createElement ("ol");
-
                 subItems.forEach(function (subEl) {
                     let element2 = document.createElement("li");
                     let text = document.createTextNode(subEl);
@@ -42,7 +41,7 @@ menuItem.forEach(
     }
 );
 
-var clicked;
+let clicked;
 
 const INGREDIENTS = {
     "cocoa": ["cocoa powder", "milk", "sugar"],
@@ -52,18 +51,3 @@ const INGREDIENTS = {
 }
 
 
-
-let clock = document.getElementById('clock');
-let timer = null;
-clock.addEventListener("click", function(){
-    if(timer !== null){
-        clearInterval(timer);
-        timer = null;
-    } else {
-        timer = setInterval(runClock, 1000);
-    }
-});
-timer = setInterval(runClock, 1000);
-function runClock() {
-    clock.textContent = new Date().toLocaleTimeString();
-}
